@@ -38,10 +38,6 @@
         let finalPrice = price.slice(1).trim();
           //console.log(finalPrice);
         item.price = finalPrice;
-          
-        let id = event.target.dataset.id;
-        item.id = id;
-        console.log(item);
 
         //show message -IN CART
         event.target.parentElement.parentElement.nextElementSibling.children[0].children[1].classList.toggle("in-cart-item");
@@ -111,13 +107,11 @@
 
   //  *** clear cart - Button ***
   const clearBtn = document.getElementById('clear-cart');
-  const cartItemD = document.querySelectorAll('.cart-item');
-  console.log(cartItemD);
   clearBtn.addEventListener('click', clearCart);
 
   function clearCart(){
     const cartItemD = document.querySelectorAll('.cart-item');
-    console.log(cartItemD);
+//     console.log(cartItemD);
     cartItemD.forEach(function(item){
       item.remove();
     })
